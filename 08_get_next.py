@@ -23,6 +23,8 @@ def reconstruct_binary_tree(father_node, pre_traversal, mid_traversal):
 
 # 广度遍历寻找对应节点
 def traversal_find(node, value):
+    if not node:
+        return None
     queue = [node]
     while queue:
         node = queue.pop(0)
