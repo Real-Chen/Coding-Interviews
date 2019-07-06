@@ -34,4 +34,4 @@ def get_digit_sum(num):
 if __name__ == "__main__":
     print(move_count(15, 100, 1))
     # 更多测试样例可参考《剑指offer》官方github
-    # https://github.com/zhulintao/CodingInterviewChinese2/blob/master/13_RobotMove/RobotMove.cpp
+    # https://github.com/zhedahht/CodingInterviewChinese2/tree/master/07_ConstructBinaryTree
