@@ -1,11 +1,13 @@
 # 面试题6：从尾到头打印链表
 # 两种实现：利用栈和利用递归
 
+# 定义节点结构
 class ListNode():
     def __init__(self, value):
         self.val = value
         self.next = None
 
+# 通过数据生成链表
 def list2linked_list(values):
     # 函数列表转链表
     # 输入列表值，输出链表头
