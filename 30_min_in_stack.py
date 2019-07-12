@@ -1,4 +1,4 @@
-# 面试题：包含min函数的栈
+# 面试题30：包含min函数的栈
 
 class stack_min():
     def __init__(self):
