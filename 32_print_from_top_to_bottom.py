@@ -23,18 +23,20 @@ def reconstruct_binary_tree(pre_traversal, mid_traversal):
 # 从上往下打印二叉树
 def print_from_top_to_bottom(root):
     if not root:
-        return
+        return []
     queue = [root]
+    values = []
     while queue:
         node = queue.pop(0)
         if node.left:
             queue.append(node.left)
         if node.right:
             queue.append(node.right)
-        print(node.val)
+        values.append(node.val)
+    return values
 
 if __name__ == '__main__':
     pre_traversal = [1,2,4,7,8,3,5,6]
     mid_traversal = [7,4,8,2,1,5,3,6]
     root = reconstruct_binary_tree(pre_traversal, mid_traversal)
-    print_from_top_to_bottom(root)
+    print(print_from_top_to_bottom(root))
