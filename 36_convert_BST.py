@@ -48,6 +48,7 @@ def convert_node_core(node):
         tail_r = node
     return head_l, tail_r
 
+
 if __name__ == '__main__':
     pre_traversal = [10,6,4,8,14,12,16]
     mid_traversal = [4,6,8,10,12,14,16]
@@ -55,4 +56,6 @@ if __name__ == '__main__':
     print_linkedList(root)
     head = convert_node(root)
     print_linkedList(head)
+
+
 
