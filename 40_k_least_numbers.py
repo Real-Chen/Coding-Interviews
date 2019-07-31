@@ -10,18 +10,14 @@ class Heap():
         self.heap.append(val)
         parent = (index - 1) // 2
         while parent >= 0 and self.heap[parent] < self.heap[index]:
-            tmp = self.heap[index]
-            self.heap[index] = self.heap[parent]
-            self.heap[parent] = tmp
+            self.heap[index], self.heap[parent] = self.heap[parent], self.heap[index]
             index = parent
             parent = (index - 1) // 2
 
     def pop(self):
         if not self.heap:
             return None
-        tmp = self.heap[0]
-        self.heap[0] = self.heap[-1]
-        self.heap[-1] = tmp
+        self.heap[0], self.heap[-1] = self.heap[-1], self.heap[0]
         max = self.heap.pop(-1)
         self.shift_down()
         return max
@@ -39,9 +35,7 @@ class Heap():
             else:
                 bigger_index = left
 
-            tmp = self.heap[index]
-            self.heap[index] = self.heap[bigger_index]
-            self.heap[bigger_index] = tmp
+            self.heap[index], self.heap[bigger_index] = self.heap[bigger_index], self.heap[index]
 
             index = bigger_index
             left = index * 2 + 1
