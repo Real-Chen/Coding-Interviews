@@ -30,5 +30,6 @@ def count_of_integers(digits):
     return 9 * count
 
 if __name__ == '__main__':
+    # print(digits_at_index(20))
     for index in range(200):
         print(digits_at_index(index), end='')
